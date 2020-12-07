@@ -1,13 +1,15 @@
-<h1>nos produit informatiques</h1>
-<ul>
-  <ng-container *ngFor="let t of materiels">
-    <li *ngIf="t.quantite > 0">
-      <img [src]="t.photo" alt="" />
-      {{ t.libelle }}
-      <span *ngIf="t.hautGamme;else NotHG ">
-        <span class="badge badge-pill badge-primary">prix: {{ t.prix }} DT  <i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
-      </span>
-      <ng-template #NotHG><span class="badge badge-pill badge-secondary">prix: {{ t.prix }} DT</span></ng-template>
-    </li>
-  </ng-container>
-</ul>
+<h1 class="text-center pt-3">nos produit informatiques</h1>
+
+<div class="contaner">
+  <div class="row">
+    <ng-container *ngFor="let t of materiels" >
+      <div *ngIf="t.quantite > 0" class="col-4 pt-3">
+        <wae-materiel [m]="t"></wae-materiel>
+      </div>
+    </ng-container>
+
+
+  </div>
+</div>
+
+

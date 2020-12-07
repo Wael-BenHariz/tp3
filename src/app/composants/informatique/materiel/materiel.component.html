@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row"></div>
+</div>
+<div class="card text-center">
+  <div class="card-header">
+    {{ t.libelle }}
+  </div>
+  <div class="card-body">
+    <img [src]="t.photo" alt="" />
+<br>
+<span *ngIf="t.hautGamme;else NotHG ">
+  <span class="badge badge-pill badge-primary">prix: {{ t.prix }} DT  <i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+</span>
+<ng-template #NotHG><span class="badge badge-pill badge-secondary">prix: {{ t.prix }} DT</span></ng-template>
+  </div>
+  <div class="card-footer text-muted">
+    <button type="button" class="btn btn-primary">Détail</button>
+  </div>
+</div>
