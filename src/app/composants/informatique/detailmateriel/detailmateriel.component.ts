@@ -23,6 +23,10 @@ export class DetailmaterielComponent implements OnInit {
           2020, 10, 4)
       }]
   };
+  afficher:boolean=false;
+  onClick(){
+    this.afficher=!this.afficher;
+  }
 
   constructor() { }
 

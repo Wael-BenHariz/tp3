@@ -9,9 +9,15 @@
   <li class="list-group-item">description: {{materiel.description}}</li>
   <li class="list-group-item">hautGamme <input type="checkbox" name="" id="" [checked]="materiel.hautGamme"></li>
   <li class="list-group-item">quantite: {{materiel.quantite}}</li>
-  <li class="list-group-item"><button type="button" class="btn btn-primary">afficher les commentaire</button></li>
+  <li class="list-group-item"><button type="button" class="btn btn-primary" (click)="onClick()">afficher les commentaire</button></li>
 </ul>
 
+    </div>
+    <div class="col-6" *ngIf="afficher">
+      <h2>liste de commentaires</h2>
+      <div *ngFor="let c of materiel.commentaires;index as i">
+        <wae-comment [comm]="c" [indice]="i"></wae-comment>
+      </div>
     </div>
   </div>
 </div>
