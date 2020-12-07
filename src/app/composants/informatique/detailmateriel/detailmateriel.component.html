@@ -1,11 +1,20 @@
-<h1>Detail de "{{materiel.libelle}}" d'ID {{materiel.id}}</h1>
-<ul>
-  <li>photo:<img [src]="materiel.photo" alt=""></li>
-  <li>marque: {{materiel.marque}}</li>
-  <li>prix: {{materiel.prix}} DT</li>
-  <li>description: {{materiel.description}}</li>
-  <li>hautGamme <input type="checkbox" name="" id="" [checked]="materiel.hautGamme"></li>
-  <li>quantite: {{materiel.quantite}}</li>
-  <li><button type="button" class="btn btn-primary">afficher les commentaire</button></li>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h1>Detail de "{{materiel.libelle}}" d'ID {{materiel.id}}</h1>
+<ul class="list-group">
+  <li class="list-group-item"><img [src]="materiel.photo" alt=""></li>
+  <li class="list-group-item">marque: {{materiel.marque}}</li>
+  <li class="list-group-item">prix: {{materiel.prix}} DT</li>
+  <li class="list-group-item">description: {{materiel.description}}</li>
+  <li class="list-group-item">hautGamme <input type="checkbox" name="" id="" [checked]="materiel.hautGamme"></li>
+  <li class="list-group-item">quantite: {{materiel.quantite}}</li>
+  <li class="list-group-item"><button type="button" class="btn btn-primary">afficher les commentaire</button></li>
 </ul>
+
+    </div>
+  </div>
+</div>
+
+
 
